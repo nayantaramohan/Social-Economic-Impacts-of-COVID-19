@@ -13,16 +13,16 @@
 ├── input_data
 │   ├── RAW_us_confirmed_cases.csv
 │   ├── cdc_masking_mandates_county.csv.zip 
-|   ├── 
-|   ├── 
-|   ├── 
+│   ├── 
+│   ├── 
+│   ├── 
 │   └── mask-use-by-county.csv 
 ├── output_viz
-|   ├── 
-|   ├──
-|   ├──
-|   ├──
-|   └──
+│   ├── 
+│   ├──
+│   ├──
+│   ├──
+│   └──
 ├── LICENSE
 ├── README.md
 └── project-analysis-nmohan.ipynb
