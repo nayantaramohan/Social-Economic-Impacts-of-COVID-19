@@ -78,7 +78,8 @@ No intermediate data files were created. However in the Jupyter notebook, there 
 
 ## Special Considerations
 - Daily confirmed data has been converted into Weekly data by taking a rolling average over 7 days to smoothen the curve and ensure a more effective data visualization.
-- Apart from the CDC masking mandate data, San Mateo's [official website](https://www.smcgov.org/san-mateo-county-reopening) stating the masking policies have also been considered in the output visualization.
+- Apart from the CDC masking mandate data, San Mateo's [official website](https://www.smcgov.org/san-mateo-county-reopening) stating the masking policies have also been considered in the output visualization.  
+*A detailed list of limitations is mentioned in the report, please refer to data512-course-project-report.pdf*
 
 ## Snapshot of Analysis Output
 ### 1.	How did masking policies change the progression of confirmed COVID-19 cases from February 1, 2020, through October 1, 2021?
