@@ -42,14 +42,28 @@ We have been reading about covid cases and death numbers in various news and soc
 - **data512-course-project-report.pdf** : This report consists of the documentation of this course project which is inclusive of an introduction, background, methodology, findings, discussions, limitations, conclusions, references and data sources used. 
 
 ## Input Data & Sources
-1. **RAW_us_confirmed_cases.csv**: The RAW_us_confirmed_cases.csv file from the Kaggle repository of [John Hopkins University COVID-19 data](https://www.kaggle.com/datasets/antgoldbloom/covid19-data-from-john-hopkins-university). This data is updated daily. You can use any revision of this dataset posted after October 1, 2022.
-2. **cdc_masking_mandates_county.csv**: The CDC dataset of [masking mandates by county](https://data.cdc.gov/Policy-Surveillance/U-S-State-and-Territorial-Public-Mask-Mandates-Fro/62d6-pm5i). Note that the CDC stopped collecting this policy information in September 2021.
-3. **mask-use-by-county.csv**: The New York Times [mask compliance survey](https://github.com/nytimes/covid-19-data/tree/master/mask-use) data.
-4. **Confirmed deaths** from the Kaggle repository of [John Hopkins University COVID-19 data](https://www.kaggle.com/datasets/antgoldbloom/covid19-data-from-john-hopkins-university). 
-5. **San Mateo masking mandate** - This data is collected by reading the announcements posted by the San Mateo officials on [smsgoc.org](https://www.smcgov.org/san-mateo-county-reopening) 
-6. **Percentage of single dose vaccines** being administered - This data is also collected by monitoring the state's official dashboard for vaccines being administered at [smchealth.org](https://www.smchealth.org/post/vaccination-totals-locations-data)
-7. **Housing Rate** - This dataset contains the median listing price in a given market during the specified month for San Mateo County. Using this dataset we can analyze the economic effect due to the pandemic.
-8. **Unemployment Rate** - This dataset can be used to answer the economic effect of the pandemic to see if it was affected and by how much during different stages of the pandemic.
+1. **RAW_us_confirmed_cases.csv**: The RAW_us_confirmed_cases.csv file from the Kaggle repository of [John Hopkins University COVID-19 data](https://www.kaggle.com/datasets/antgoldbloom/covid19-data-from-john-hopkins-university).     
+Description: Total number of daily confirmed covid cases across various counties in the United States.  
+
+2. **cdc_masking_mandates_county.csv**: The CDC dataset of [masking mandates by county](https://data.cdc.gov/Policy-Surveillance/U-S-State-and-Territorial-Public-Mask-Mandates-Fro/62d6-pm5i). Note that the CDC stopped collecting this policy information in September 2021.  
+Description: The CDC masking mandate at a county level was collected until September 2021.  
+
+3. **mask-use-by-county.csv**: The New York Times [mask compliance survey](https://github.com/nytimes/covid-19-data/tree/master/mask-use) data.  
+Description: Estimate of the mask usage by counties in the US based on roughly 250K interviews conducted by Dynata from July 2 to July 14, 2020.  
+
+4. **Confirmed deaths** from the Kaggle repository of [John Hopkins University COVID-19 data](https://www.kaggle.com/datasets/antgoldbloom/covid19-data-from-john-hopkins-university).   
+Description: Total number of daily confirmed covid cases across various counties in the United States.  
+
+5. **Housing Rate** - This dataset from [FRED](https://fred.stlouisfed.org/series/MEDLISPRIMM6081)  
+Description: This dataset contains the median listing price in a given market during the specified month for San Mateo County.  
+
+6. **Unemployment Rate** - This dataset from [FRED](https://fred.stlouisfed.org/series/CASANM0URN)   
+Description: The units of unemployment are in percent and the frequency is monthly. The unemployment rate is the unemployed percent of the civilian labor force [100 times (unemployed/civilian labor force)].  
+  
+**Additional qualitative data**    
+
+1. **San Mateo masking mandate** - This data is collected by reading the announcements posted by the San Mateo officials on [smsgoc.org](https://www.smcgov.org/san-mateo-county-reopening)   
+2. **Percentage of single dose vaccines** being administered - This data is also collected by monitoring the state's official dashboard for vaccines being administered at [smchealth.org](https://www.smchealth.org/post/vaccination-totals-locations-data) 
 
 ## Intermediate Data Files
 No intermediate data files were created. However in the Jupyter notebook, there were additional dataframes created for extensive analysis. Please refer to project-analysis-nmohan.ipynb file for further details. 
@@ -72,10 +86,20 @@ No intermediate data files were created. However in the Jupyter notebook, there 
 **Inference**: The second wave in the covid cases after May 2021 can be attributed to the fact that the San Mateo county lifted the masking mandates. Previously with just the CDC masking mandate, this trend isn't visible.  
 
 ### 2.	What other trends can the masking mandate by San Mateo County reveal about the pandemic?
-### 3.	With every stage of vaccines administered, is there a decrease in the number of deaths caused by COVID?
-### 4.	How was the housing rate affected in San Mateo County due to the pandemic?
-### 5.	How was the unemployment rate affected in San Mateo County due to the pandemic?
+![Question2](output_viz/img2_covid_deaths_masking.png) 
+**Inference**: The visualization does not really give an indication if the masking mandates are helping with the number of death rates. As we can see, the number of deaths are reducing when the masking mandate isn't enforced. There must be some other external data responsible for this.  
 
+### 3.	With every stage of vaccines administered, is there a decrease in the number of deaths caused by COVID?
+![Question3](output_viz/img3_covid_deaths_vaccines.png) 
+**Inference**: As we can see the rate of which the death toll is rising reduces once the percentage of vaccines being administered crosses the 50%+ threshold. This can be udnerstood from the visualization by noting the reduction in the number of change points detected in before and after the 50%+ vaccinated line.  
+
+### 4.	How was the housing rate affected in San Mateo County due to the pandemic?
+![Question4](output_viz/img4_housing_rate.png) 
+**Inference**: From the visualization it is clear that there is no trend of the housing prices being affected by the pandemic. Infact it has been noisy and random.
+
+### 5.	How was the unemployment rate affected in San Mateo County due to the pandemic?
+![Question5](output_viz/img5_unemployment_rate.png)   
+**Inference**: During the start of the pandemic the unemployment levels rose sharply, after that the unemployment rates have only been declining. This is a good sign for the people in San Mateo.
 
 ## Best practices for documentation
 - PEP 8 – Style Guide for Python Code ([Reference link](https://peps.python.org/pep-0008/))
